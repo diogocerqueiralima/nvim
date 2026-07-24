@@ -7,7 +7,7 @@ Personal Neovim configuration, written in Lua.
 ```
 init.lua                  -- entry point, sets leader keys, loads config modules, sets colorscheme
 lua/config/options.lua    -- editor options (tabstop, line numbers, clipboard, etc.)
-lua/config/keymap.lua     -- keymaps (LSP rename, telescope) and diagnostic float config
+lua/config/keymap.lua     -- keymaps (LSP rename, telescope, nvim-tree) and diagnostic float config
 lua/config/lazy.lua       -- bootstraps and configures lazy.nvim plugin manager
 lua/plugins/mason.lua     -- mason.nvim setup (LSP/DAP/linter installer)
 lua/plugins/blink.lua     -- blink.cmp completion setup
@@ -17,6 +17,7 @@ lua/plugins/esp32.lua     -- esp32.nvim setup (ESP-IDF clangd config)
 lua/plugins/catppuccin.lua -- catppuccin colorscheme (mocha flavour)
 lua/plugins/telescope.lua -- telescope.nvim fuzzy finder (with fzf-native)
 lua/plugins/treesitter.lua -- nvim-treesitter setup (highlight and indent enabled)
+lua/plugins/tree.lua      -- nvim-tree.lua file explorer
 ```
 
 Plugins are managed with [lazy.nvim](https://github.com/folke/lazy.nvim), auto-installed on
@@ -30,8 +31,21 @@ automatically: plain C/C++ projects (root marker: `compile_commands.json`,
 `compile_flags.txt`, `.clangd`, `CMakeLists.txt`, `Makefile` or `.git`) get plain system
 clangd, while ESP-IDF projects (root marker: `sdkconfig`) get esp32.nvim's ESP-IDF-specific
 clangd setup. Syntax highlighting and indentation are handled by nvim-treesitter, fuzzy
-finding by telescope.nvim, and the colorscheme is catppuccin (mocha). More plugins and
-language servers to come.
+finding by telescope.nvim, file exploration by nvim-tree.lua, and the colorscheme is
+catppuccin (mocha). More plugins and language servers to come.
+
+## Keymaps
+
+| Keymap       | Action                  |
+| ------------ | ----------------------- |
+| `<Esc>`      | Clear search highlight   |
+| `<leader>rn` | LSP rename               |
+| `<leader>ff` | Telescope: find files    |
+| `<leader>fg` | Telescope: live grep     |
+| `<leader>fb` | Telescope: buffers       |
+| `<leader>gd` | Telescope: goto definition |
+| `<leader>gi` | Telescope: goto implementation |
+| `<leader>t`  | Toggle nvim-tree         |
 
 ## Requirements
 

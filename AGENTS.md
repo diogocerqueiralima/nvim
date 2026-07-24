@@ -7,7 +7,8 @@ user-facing overview of the config.
 
 A personal Neovim configuration written in Lua, plugin-managed via
 [lazy.nvim](https://github.com/folke/lazy.nvim). It is not LazyVim — LazyVim was removed;
-the plugin set is intentionally small and hand-picked.
+the plugin set is intentionally small and hand-picked, covering LSP/completion, fuzzy
+finding, a file explorer, treesitter, and a colorscheme.
 
 ## Layout
 
