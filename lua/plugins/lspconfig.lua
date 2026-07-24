@@ -32,6 +32,7 @@ return {
           "--completion-style=detailed",
           "--header-insertion=iwyu",
           "--fallback-style=llvm",
+					"--header-insertion-decorators",
         }
         return vim.lsp.rpc.start(cmd, dispatchers)
       end,
