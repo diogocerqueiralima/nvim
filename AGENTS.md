@@ -66,5 +66,3 @@ argv list).
 
 - Commit messages: short imperative subject (`feat:`, `fix:`, `docs:` prefixes are used but
   not strictly enforced).
-- This repo pushes to `origin/main` directly (no PR workflow) — always confirm with the user
-  before pushing.
