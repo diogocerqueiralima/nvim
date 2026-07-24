@@ -28,6 +28,13 @@ Follow that one-file-per-plugin convention when adding new plugins.
 
 - `lua/plugins/cord.lua` — cord.nvim (Discord Rich Presence). Imperative `config` because it
   needs a `buttons` table with a `url` function.
+- `lua/plugins/treesitter.lua` — nvim-treesitter is pinned to its `main` branch, which
+  dropped the old `require("nvim-treesitter.configs").setup{highlight={enable=true}}` API.
+  Highlighting/indent/folding must instead be wired up imperatively: call
+  `require("nvim-treesitter").setup()` and `.install(...)`, then start the highlighter per
+  buffer via a `FileType` autocmd calling `vim.treesitter.start()` (plus setting
+  `foldexpr`/`indentexpr` to the `vim.lua.*` treesitter functions). The old `opts` table
+  form silently does nothing on this branch — don't revert to it.
 
 ## Editing conventions
 

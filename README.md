@@ -16,9 +16,10 @@ lua/plugins/lspconfig.lua -- nvim-lspconfig setup (lua_ls; clangd, auto-detects 
 lua/plugins/esp32.lua     -- esp32.nvim setup (ESP-IDF clangd config)
 lua/plugins/catppuccin.lua -- catppuccin colorscheme (mocha flavour)
 lua/plugins/telescope.lua -- telescope.nvim fuzzy finder (with fzf-native)
-lua/plugins/treesitter.lua -- nvim-treesitter setup (highlight and indent enabled)
+lua/plugins/treesitter.lua -- nvim-treesitter setup (main branch API; highlight/indent/fold)
 lua/plugins/tree.lua      -- nvim-tree.lua file explorer
 lua/plugins/cord.lua      -- cord.nvim Discord Rich Presence
+lua/plugins/copilot.lua   -- github/copilot.vim
 ```
 
 Plugins are managed with [lazy.nvim](https://github.com/folke/lazy.nvim), auto-installed on
@@ -33,8 +34,8 @@ automatically: plain C/C++ projects (root marker: `compile_commands.json`,
 clangd, while ESP-IDF projects (root marker: `sdkconfig`) get esp32.nvim's ESP-IDF-specific
 clangd setup. Syntax highlighting and indentation are handled by nvim-treesitter, fuzzy
 finding by telescope.nvim, file exploration by nvim-tree.lua, and the colorscheme is
-catppuccin (mocha). cord.nvim provides Discord Rich Presence. More plugins and language
-servers to come.
+catppuccin (mocha). cord.nvim provides Discord Rich Presence, and copilot.vim provides
+AI-assisted completion. More plugins and language servers to come.
 
 ## Keymaps
 
