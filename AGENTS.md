@@ -24,6 +24,11 @@ lazy-lock.json            -- pinned plugin commits, written by lazy.nvim itself
 Each file under `lua/plugins/` returns a single lazy.nvim spec table (or an array of them).
 Follow that one-file-per-plugin convention when adding new plugins.
 
+## Notable plugins
+
+- `lua/plugins/cord.lua` — cord.nvim (Discord Rich Presence). Imperative `config` because it
+  needs a `buttons` table with a `url` function.
+
 ## Editing conventions
 
 - Indentation is inconsistent across existing files (some use tabs, some spaces) — match

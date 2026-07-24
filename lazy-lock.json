@@ -1,6 +1,7 @@
 {
   "blink.cmp": { "branch": "main", "commit": "78336bc89ee5365633bcf754d93df01678b5c08f" },
   "catppuccin": { "branch": "main", "commit": "c7c692a0ad3080710893abbae100171819a3e4be" },
+  "cord.nvim": { "branch": "master", "commit": "8f081613c1314a0d6f38839c2788216621efb4d9" },
   "esp32.nvim": { "branch": "main", "commit": "112b4b052b7d3ccd361a53e683808435a4ecaf5a" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
   "mason.nvim": { "branch": "main", "commit": "2a6940af80375532e5e9e7c1f2fc6319a1b7a69d" },
