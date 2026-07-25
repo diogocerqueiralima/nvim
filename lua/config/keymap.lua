@@ -6,6 +6,7 @@ vim.diagnostic.config({
 })
 
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP Rename" })
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP Code Action" })
 
 -- TELESCOPE
 
