@@ -20,6 +20,8 @@ lua/plugins/treesitter.lua -- nvim-treesitter setup (main branch API; highlight/
 lua/plugins/tree.lua      -- nvim-tree.lua file explorer
 lua/plugins/cord.lua      -- cord.nvim Discord Rich Presence
 lua/plugins/copilot.lua   -- github/copilot.vim
+lua/plugins/claude.lua    -- claudecode.nvim Claude Code integration
+lua/plugins/wakatime.lua  -- vim-wakatime coding time tracker
 ```
 
 Plugins are managed with [lazy.nvim](https://github.com/folke/lazy.nvim), auto-installed on
@@ -34,8 +36,10 @@ automatically: plain C/C++ projects (root marker: `compile_commands.json`,
 clangd, while ESP-IDF projects (root marker: `sdkconfig`) get esp32.nvim's ESP-IDF-specific
 clangd setup. Syntax highlighting and indentation are handled by nvim-treesitter, fuzzy
 finding by telescope.nvim, file exploration by nvim-tree.lua, and the colorscheme is
-catppuccin (mocha). cord.nvim provides Discord Rich Presence, and copilot.vim provides
-AI-assisted completion. More plugins and language servers to come.
+catppuccin (mocha). cord.nvim provides Discord Rich Presence, copilot.vim and
+claudecode.nvim (bundled with snacks.nvim) provide AI-assisted completion and an editor
+integration for Claude Code, and vim-wakatime tracks coding activity. More plugins and
+language servers to come.
 
 ## Keymaps
 
@@ -49,6 +53,19 @@ AI-assisted completion. More plugins and language servers to come.
 | `<leader>gd` | Telescope: goto definition |
 | `<leader>gi` | Telescope: goto implementation |
 | `<leader>t`  | Toggle nvim-tree         |
+| `<C-h>`      | Terminal: move to window left (normal mode) |
+| `<C-j>`      | Terminal: move to window below (normal mode) |
+| `<C-k>`      | Terminal: move to window above (normal mode) |
+| `<C-l>`      | Terminal: move to window right (normal mode) |
+| `<leader>ac` | Toggle Claude Code       |
+| `<leader>af` | Focus Claude Code        |
+| `<leader>ar` | Resume Claude Code       |
+| `<leader>aC` | Continue Claude Code     |
+| `<leader>am` | Select Claude model      |
+| `<leader>ab` | Add current buffer to Claude |
+| `<leader>as` | Send selection to Claude (visual mode) / add file (tree) |
+| `<leader>aa` | Accept Claude diff       |
+| `<leader>ad` | Deny Claude diff         |
 
 ## Requirements
 

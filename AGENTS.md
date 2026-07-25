@@ -28,6 +28,11 @@ Follow that one-file-per-plugin convention when adding new plugins.
 
 - `lua/plugins/cord.lua` — cord.nvim (Discord Rich Presence). Imperative `config` because it
   needs a `buttons` table with a `url` function.
+- `lua/plugins/claude.lua` — claudecode.nvim (Claude Code editor integration), depends on
+  `folke/snacks.nvim`. Declares both `cmd` and `keys`: `cmd` is required so the
+  `:ClaudeCode*` user commands exist on a fresh start (a `keys`-only spec would defer
+  loading until a `<leader>a*` mapping is pressed). Keep the `cmd` list in sync with the
+  commands used in `keys`.
 - `lua/plugins/treesitter.lua` — nvim-treesitter is pinned to its `main` branch, which
   dropped the old `require("nvim-treesitter.configs").setup{highlight={enable=true}}` API.
   Highlighting/indent/folding must instead be wired up imperatively: call
