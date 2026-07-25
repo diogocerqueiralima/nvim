@@ -20,7 +20,7 @@ vim.keymap.set("n", "<leader>gi", telescope.lsp_implementations, { desc = "Goto 
 
 -- NVIM TREE
 
-vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- NAVIGATION
 
@@ -28,3 +28,16 @@ vim.keymap.set('t', '<C-h>', [[<C-\><C-n><C-w>h]])
 vim.keymap.set('t', '<C-j>', [[<C-\><C-n><C-w>j]])
 vim.keymap.set('t', '<C-k>', [[<C-\><C-n><C-w>k]])
 vim.keymap.set('t', '<C-l>', [[<C-\><C-n><C-w>l]])
+
+-- TERMINAL
+
+vim.keymap.set('n', '<leader>t', ':split | terminal<CR>')
+
+vim.opt.splitbelow = true -- Open new horizontal splits below the current window
+
+-- Open terminal in insert mode when opening a terminal buffer
+vim.api.nvim_create_autocmd('TermOpen', {
+  callback = function()
+    vim.cmd('startinsert')
+  end,
+})

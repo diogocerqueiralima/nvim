@@ -7,7 +7,7 @@ Personal Neovim configuration, written in Lua.
 ```
 init.lua                  -- entry point, sets leader keys, loads config modules, sets colorscheme
 lua/config/options.lua    -- editor options (tabstop, line numbers, clipboard, etc.)
-lua/config/keymap.lua     -- keymaps (LSP rename, telescope, nvim-tree) and diagnostic float config
+lua/config/keymap.lua     -- keymaps (LSP rename, telescope, nvim-tree, terminal) and diagnostic float config
 lua/config/lazy.lua       -- bootstraps and configures lazy.nvim plugin manager
 lua/plugins/mason.lua     -- mason.nvim setup (LSP/DAP/linter installer)
 lua/plugins/blink.lua     -- blink.cmp completion setup
@@ -52,7 +52,8 @@ language servers to come.
 | `<leader>fb` | Telescope: buffers       |
 | `<leader>gd` | Telescope: goto definition |
 | `<leader>gi` | Telescope: goto implementation |
-| `<leader>t`  | Toggle nvim-tree         |
+| `<leader>e`  | Toggle nvim-tree         |
+| `<leader>t`  | Open terminal in horizontal split |
 | `<C-h>`      | Terminal: move to window left (normal mode) |
 | `<C-j>`      | Terminal: move to window below (normal mode) |
 | `<C-k>`      | Terminal: move to window above (normal mode) |
