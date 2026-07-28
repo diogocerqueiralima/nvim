@@ -22,6 +22,7 @@ lua/plugins/cord.lua      -- cord.nvim Discord Rich Presence
 lua/plugins/copilot.lua   -- github/copilot.vim
 lua/plugins/claude.lua    -- claudecode.nvim Claude Code integration
 lua/plugins/wakatime.lua  -- vim-wakatime coding time tracker
+lua/plugins/autopairs.lua -- nvim-autopairs auto-close brackets/quotes
 ```
 
 Plugins are managed with [lazy.nvim](https://github.com/folke/lazy.nvim), auto-installed on
@@ -38,8 +39,8 @@ clangd setup. Syntax highlighting and indentation are handled by nvim-treesitter
 finding by telescope.nvim, file exploration by nvim-tree.lua, and the colorscheme is
 catppuccin (mocha). cord.nvim provides Discord Rich Presence, copilot.vim and
 claudecode.nvim (bundled with snacks.nvim) provide AI-assisted completion and an editor
-integration for Claude Code, and vim-wakatime tracks coding activity. More plugins and
-language servers to come.
+integration for Claude Code, vim-wakatime tracks coding activity, and nvim-autopairs
+auto-closes brackets/quotes. More plugins and language servers to come.
 
 ## Keymaps
 
@@ -47,11 +48,13 @@ language servers to come.
 | ------------ | ----------------------- |
 | `<Esc>`      | Clear search highlight   |
 | `<leader>rn` | LSP rename               |
+| `<leader>ca` | LSP code action          |
 | `<leader>ff` | Telescope: find files    |
 | `<leader>fg` | Telescope: live grep     |
 | `<leader>fb` | Telescope: buffers       |
 | `<leader>gd` | Telescope: goto definition |
 | `<leader>gi` | Telescope: goto implementation |
+| `<leader>gr` | Telescope: goto references |
 | `<leader>e`  | Toggle nvim-tree         |
 | `<leader>t`  | Open terminal in horizontal split |
 | `<C-h>`      | Terminal: move to window left (normal mode) |
