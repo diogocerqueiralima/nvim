@@ -23,6 +23,10 @@ vim.keymap.set("n", "<leader>gr", telescope.lsp_references, { desc = "Goto refer
 
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
+-- MARKDOWN
+
+vim.keymap.set("n", "<leader>mp", ":RenderMarkdown toggle<CR>", { desc = "Render markdown toggle" })
+
 -- NAVIGATION
 
 vim.keymap.set('t', '<C-h>', [[<C-\><C-n><C-w>h]])

@@ -57,6 +57,7 @@ auto-closes brackets/quotes. More plugins and language servers to come.
 | `<leader>gr` | Telescope: goto references |
 | `<leader>e`  | Toggle nvim-tree         |
 | `<leader>t`  | Open terminal in horizontal split |
+| `<leader>mp` | Toggle render-markdown           |
 | `<C-h>`      | Terminal: move to window left (normal mode) |
 | `<C-j>`      | Terminal: move to window below (normal mode) |
 | `<C-k>`      | Terminal: move to window above (normal mode) |
