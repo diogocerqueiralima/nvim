@@ -26,6 +26,8 @@ Follow that one-file-per-plugin convention when adding new plugins.
 
 ## Notable plugins
 
+- `lua/plugins/render-markdown.lua` — render-markdown.nvim, depends on `nvim-treesitter` and
+  `mini.nvim`. Pairs with `marksman` LSP (see LSP setup below) for markdown editing.
 - `lua/plugins/cord.lua` — cord.nvim (Discord Rich Presence). Imperative `config` because it
   needs a `buttons` table with a `url` function.
 - `lua/plugins/claude.lua` — claudecode.nvim (Claude Code editor integration), depends on
@@ -55,6 +57,7 @@ Follow that one-file-per-plugin convention when adding new plugins.
 - Uses the native `vim.lsp.config()` / `vim.lsp.enable()` API (Neovim >= 0.11), not
   `nvim-lspconfig`'s old `require("lspconfig").<server>.setup{}` pattern.
 - `vim.lsp.config("*", ...)` sets capabilities (from `blink.cmp`) shared by all servers.
+- `marksman` enabled for markdown, no custom config.
 - Some servers are configured to detect project type dynamically (via `root_dir`/`cmd`
   functions) so that a specialized toolchain plugin only kicks in for the project type it
   targets, with a generic fallback otherwise. When touching one of these, keep both branches

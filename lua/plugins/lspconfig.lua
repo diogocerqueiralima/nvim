@@ -6,6 +6,11 @@ return {
 			capabilities = require("blink.cmp").get_lsp_capabilities(),
 		})
 
+		-- MARKDOWN LSP CONFIG
+
+		vim.lsp.config("marksman", {})
+		vim.lsp.enable("marksman")
+
 		-- LUA LSP CONFIG
 
 		vim.lsp.config("lua_ls", {
